@@ -16,3 +16,11 @@ libpeerconnection.log
 
 # Ignore bower components
 bower_components
+
+# Ignore build directories
+#
+# Stop ignoring these if you want
+# to include the build directories
+# in your repository
+public/build
+public/vendor
