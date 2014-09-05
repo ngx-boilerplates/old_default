@@ -41,7 +41,9 @@ Start the harp server from your project directory:
 $ harp server
 ```
 
-And navigate to `http://localhost:9000` in your browser.
+And navigate to `http://localhost:9000` in your browser:
+
+![Homepage](http://i.imgur.com/dORKysf.png)
 
 ## Unit tests
 
