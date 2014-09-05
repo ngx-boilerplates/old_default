@@ -1,6 +1,6 @@
-# Harp boilerplate for an AngularJS application
+# Harp boilerplate for an AngularJS app
 
-The power of Harp and AngularJS combined!
+Harp + AngularJS = absolute awesomeness!
 
 ## Installation
 
