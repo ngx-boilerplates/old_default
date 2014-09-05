@@ -1,12 +1,20 @@
 # Harp boilerplate for an AngularJS app
 
-Get your AngularJS application up and running in seconds!
-
 **Zero configuration required!**
 
-- Uses the [Google recommended AngularJS application structure](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub)
-- Uses the [AngularJS styleguide](https://github.com/toddmotto/angularjs-styleguide) by [Todd Motto](http://toddmotto.com/)
-- Uses the lovely [HarpJS](http://harpjs.com) web server
+This boilerplate combines all best practices of:
+
+- the official [Google recommended AngularJS application structure](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub)
+- the fantastic [AngularJS styleguide](https://github.com/toddmotto/angularjs-styleguide) by [Todd Motto](http://toddmotto.com/)
+- the lovely [HarpJS](http://harpjs.com) web server
+
+Main features:
+
+- scaffolds the boilerplate for your AngularJS application in seconds
+- use your favorite template language: Jade, EJS, Markdown, vanilla HTML or use them all together
+- supports a `development` and a `production` environment
+- uses Harp as built-in web server to develop locally or run in production
+- supports compilation to a static website to host on any web server
 
 ## Installation
 
