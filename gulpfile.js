@@ -166,9 +166,17 @@ gulp.task('watch', function () {
   var server = livereload();
   gulp.watch(sourceJavaScriptFiles, ['process-js']);
   gulp.watch(sourceLessFiles, ['process-css']);
-  gulp.watch(['public/**', '!public/**/_build/**']).on('change', function (file) {
-    server.changed(file.path);
-  });
+  gulp
+    .watch(['public/**', '!public/**/_build/**'])
+    .on('change', function (file) {
+      server.changed(file.path);
+    })
+    .on('added', function (file) {
+      server.changed(file.path);
+    })
+    .on('deleted', function (file) {
+      server.changed(file.path);
+    });
 });
 
 gulp.task('default', ['watch', 'process-all']);
