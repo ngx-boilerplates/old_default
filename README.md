@@ -1,5 +1,7 @@
 # Harp boilerplate for an AngularJS app
 
+Start writing code, stop worrying about the server!
+
 **Zero configuration required!**
 
 This boilerplate combines all best practices of:
@@ -8,10 +10,23 @@ This boilerplate combines all best practices of:
 - the fantastic [AngularJS styleguide](https://github.com/toddmotto/angularjs-styleguide) by [Todd Motto](http://toddmotto.com/)
 - the lovely [HarpJS](http://harpjs.com) web server
 
-Main features:
 
-- scaffolds the boilerplate for your AngularJS application in seconds
+Component based approach:
+
+- add/remove features by adding/removing components
+- add/remove components by adding/removing files
+- each components has its own styles, scripts and templates
+
+What it does:
+
+- creates an entire directory structure for your AngularJS application
+- creates the initial AngularJS components so you can immediately start working on your own code
+- allows you to change all the generated boilerplate to your liking
+
+Special features:
+
 - use your favorite template language: Jade, EJS, Markdown, vanilla HTML or use them all together
+- use the most suited template language some specific content block and include it as a partial in another language e.g. include `partial.md` inside `index.jade` and it will automatically render fine
 - supports a `development` and a `production` environment
 - uses Harp as built-in web server to develop locally or run in production
 - supports compilation to a static website to host on any web server
@@ -100,10 +115,18 @@ public
 To run unit tests:
 
 ```sh
-$ gulp
+$ gulp test
 ```
 
 This will run all tests in `public/**/_build/**/*.spec.js`.
+
+## Generate documentation
+
+To generate documentation:
+
+```sh
+$ gulp docs
+```
 
 ## Gulp
 
