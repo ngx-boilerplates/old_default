@@ -127,29 +127,16 @@ gulp.task('test-src-js', function (done) {
 });
 
 /**
- * Run test once and exit
+ * Run tests on every change
  */
-gulp.task('test-dist-concatenated', function (done) {
-  karma.start({
-    configFile: __dirname + '/karma-dist-concatenated.conf.js',
-    singleRun: true
-  }, done);
-});
-
-/**
- * Run test once and exit
- */
-gulp.task('test-dist-minified', function (done) {
-  karma.start({
-    configFile: __dirname + '/karma-dist-minified.conf.js',
-    singleRun: true
-  }, done);
+gulp.task('test', function(){
+  gulp.watch(sourceJavaScriptFiles, ['test-src-js']);
 });
 
 /**
  * Build api documentation
  */
-gulp.task('build-docs', shell.task([
+gulp.task('docs', shell.task([
     'node node_modules/angular-jsdoc/node_modules/jsdoc/jsdoc.js' +
     ' -c node_modules/angular-jsdoc/conf.json ' +
     ' -t node_modules/angular-jsdoc/template ' +
@@ -157,11 +144,17 @@ gulp.task('build-docs', shell.task([
     ' -r public'
 ]));
 
+/**
+ * Task for different parts of the build process
+ */
 gulp.task('process-all', ['process-js', 'process-css', 'process-vendor-files']);
 gulp.task('process-js', ['jshint-src-js', 'test-src-js', 'build-js']);
 gulp.task('process-css', ['build-css']);
 gulp.task('process-vendor-files', ['copy-vendor-files']);
 
+/**
+ * Watch task for default task
+ */
 gulp.task('watch', function () {
   var server = livereload();
   gulp.watch(sourceJavaScriptFiles, ['process-js']);
@@ -179,4 +172,7 @@ gulp.task('watch', function () {
     });
 });
 
+/**
+ * Default task
+ */
 gulp.task('default', ['watch', 'process-all']);
