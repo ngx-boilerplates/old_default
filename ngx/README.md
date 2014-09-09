@@ -1,80 +1,31 @@
-# Harp boilerplate for an AngularJS app
+# Your AngularJS application
 
-Start writing code, stop worrying about the server!
+## How to develop
 
-**Zero configuration required!**
-
-This boilerplate combines all best practices of:
-
-- the official [Google recommended AngularJS application structure](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub)
-- the fantastic [AngularJS styleguide](https://github.com/toddmotto/angularjs-styleguide) by [Todd Motto](http://toddmotto.com/)
-- the lovely [HarpJS](http://harpjs.com) web server
-
-
-Component based approach:
-
-- add/remove features by adding/removing components
-- add/remove components by adding/removing files
-- each components has its own styles, scripts and templates
-
-What it does:
-
-- creates an entire directory structure for your AngularJS application
-- creates the initial AngularJS components so you can immediately start working on your own code
-- allows you to change all the generated boilerplate to your liking
-
-Special features:
-
-- use your favorite template language: Jade, EJS, Markdown, vanilla HTML or use them all together
-- use the most suited template language some specific content block and include it as a partial in another language e.g. include `partial.md` inside `index.jade` and it will automatically render fine
-- supports a `development` and a `production` environment
-- uses Harp as built-in web server to develop locally or run in production
-- supports compilation to a static website to host on any web server
-
-## Installation
-
-First make sure you have Harp and Bower installed:
+First install all dependencies
 
 ```sh
-$ sudo npm install -g harp
-$ sudo npm install -g bower
-```
-
-Then initialize the boilerplate:
-
-```sh
-$ harp init -b jvandemo/hb-angular myproject
-```
-
-Change the directory to the new `myproject` directory:
-
-```sh
-$ cd myproject
-```
-
-Use bower to install the latest dependencies:
-
-```sh
+$ npm install
 $ bower install
 ```
 
-Run gulp to assemble the concatenated AngularJS library:
+Then run gulp to build and watch files during development
 
 ```sh
 $ gulp
 ```
 
-Start the harp server from your project directory:
+Finally start the harp server from your project directory:
 
 ```sh
 $ harp server
 ```
 
-And navigate to `http://localhost:9000` in your browser:
+And navigate to `http://localhost:9000` in your browser to preview your work:
 
 ![Homepage](http://i.imgur.com/dORKysf.png)
 
-## How it works
+## File structure
 
 All action happens in the `public` directory, so let's have a look at its structure:
 
@@ -110,7 +61,7 @@ public
         └── homepage.jade           # Jade file will be compiled to HTML automatically
 ```
 
-## Unit tests
+## Testing
 
 To run unit tests:
 
@@ -120,23 +71,10 @@ $ gulp test
 
 This will run all tests in `public/**/_build/**/*.spec.js`.
 
-## Generate documentation
+## Documentation
 
 To generate documentation:
 
 ```sh
 $ gulp docs
 ```
-
-## Gulp
-
-Gulp is used to:
-
-- selectively copy specific files from the Bower components to the `public/vendor` directory
-- build individual components from all `_build` directories into the `public/build` directory
- 
-## Changelog
-
-### v0.1.0
-
-- Initial boilerplate
