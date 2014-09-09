@@ -13,10 +13,11 @@ var gulp = require('gulp'),
     'public/**/_build/**/*.module.js',
     'public/**/_build/**/*.js',
     '!public/**/_build/**/*.spec.js'
-  ];
-sourceLessFiles = [
-  'public/**/_build/**/*.less'
-],
+  ],
+  sourceLessFiles = [
+    'public/**/_build/**/*.less',
+    'public/**/_build/**/_*.less'
+  ],
   bowerDirectory = './bower_components';
 
 /**
